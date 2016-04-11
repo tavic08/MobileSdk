@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NF0-qe-ZPo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="lK5-no-bGD">
+            <objects>
+                <viewController id="WyZ-xb-uWq" customClass="HomeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bGx-VU-DDR"/>
+                        <viewControllerLayoutGuide type="bottom" id="K3n-Wv-eqV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mw7-eD-OBD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Chat with the Jivo support team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHf-Z6-re0">
+                                <rect key="frame" x="0.0" y="248" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-gv-4kM">
+                                <rect key="frame" x="167" y="557" width="264" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iay-sd-oKk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="JivoChat Mobile SDK"/>
+                                <connections>
+                                    <action selector="onSdkClick:" destination="WyZ-xb-uWq" eventType="touchUpInside" id="xQK-Dk-056"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This app was made with the" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-Rd-env">
+                                <rect key="frame" x="-1" y="528" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-XZ-pkG">
+                                <rect key="frame" x="236" y="282" width="127" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start сhat"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kzB-WA-KAk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jivochat" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-BM-1Ij">
+                                <rect key="frame" x="186" y="156" width="230" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="A05-Sw-JqO"/>
+                                    <constraint firstAttribute="height" constant="84" id="kXj-wc-waf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lCv-XZ-pkG" firstAttribute="centerX" secondItem="mw7-eD-OBD" secondAttribute="centerX" id="1Uh-8l-p5h"/>
+                            <constraint firstItem="3d5-gv-4kM" firstAttribute="centerX" secondItem="mw7-eD-OBD" secondAttribute="centerX" id="LDM-gn-iLF"/>
+                            <constraint firstItem="GO7-Rd-env" firstAttribute="leading" secondItem="mw7-eD-OBD" secondAttribute="leadingMargin" constant="-20" id="Mt4-i5-KG0"/>
+                            <constraint firstItem="WHf-Z6-re0" firstAttribute="centerX" secondItem="mw7-eD-OBD" secondAttribute="centerX" id="bHN-Md-Qut"/>
+                            <constraint firstItem="lCv-XZ-pkG" firstAttribute="centerY" secondItem="mw7-eD-OBD" secondAttribute="centerY" id="eIy-7W-HUX"/>
+                            <constraint firstItem="K3n-Wv-eqV" firstAttribute="top" secondItem="3d5-gv-4kM" secondAttribute="bottom" constant="18" id="f8j-B9-94K"/>
+                            <constraint firstItem="lCv-XZ-pkG" firstAttribute="top" secondItem="WHf-Z6-re0" secondAttribute="bottom" constant="5" id="mq9-3p-ACK"/>
+                            <constraint firstItem="ghM-BM-1Ij" firstAttribute="centerX" secondItem="mw7-eD-OBD" secondAttribute="centerX" id="rpp-0K-NXi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GO7-Rd-env" secondAttribute="trailing" constant="-20" id="tje-so-rPM"/>
+                            <constraint firstItem="WHf-Z6-re0" firstAttribute="top" secondItem="ghM-BM-1Ij" secondAttribute="bottom" constant="5" id="xeF-NR-F2w"/>
+                            <constraint firstItem="3d5-gv-4kM" firstAttribute="top" secondItem="GO7-Rd-env" secondAttribute="bottom" constant="5" id="yrw-8V-0vD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" prompt=" " id="tAb-nr-sY5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="edF-cg-YXv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="startChat" destination="lCv-XZ-pkG" id="K5V-fJ-4IE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30w-Ye-wNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="14"/>
+        </scene>
+        <!--Chat Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChatController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33A-ZY-7ka">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="33A-ZY-7ka" secondAttribute="trailing" constant="-20" id="6cK-1O-Yz7"/>
+                            <constraint firstItem="33A-ZY-7ka" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EyI-gE-qxu"/>
+                            <constraint firstItem="33A-ZY-7ka" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="gHC-lh-cfC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="33A-ZY-7ka" secondAttribute="bottom" id="k4y-lz-8vL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="JivoView" destination="33A-ZY-7ka" id="19b-p3-lU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="14"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m3u-n5-iIy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NF0-qe-ZPo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Kzv-t7-RbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.087619280336178648" green="0.088163604096675049" blue="0.11046497926093513" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WyZ-xb-uWq" kind="relationship" relationship="rootViewController" id="TRV-V3-kc9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5b7-5i-YNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="14"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jivochat" width="1902" height="600"/>
+    </resources>
+</document>

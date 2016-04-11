@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C904E0B91CB3B74D00F6A36D /* html in Resources */ = {isa = PBXBuildFile; fileRef = C904E0B81CB3B74D00F6A36D /* html */; };
+		C904E0BC1CB3B75A00F6A36D /* JivoSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = C904E0BB1CB3B75A00F6A36D /* JivoSdk.m */; };
+		C93530F81C748C5A00A2C089 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93530F71C748C5A00A2C089 /* HomeController.m */; };
+		C93531031C74B3EE00A2C089 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93531051C74B3EE00A2C089 /* Localizable.strings */; };
+		C935310A1C74FB6B00A2C089 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C935310C1C74FB6B00A2C089 /* InfoPlist.strings */; };
+		C9E894E41C476A9200CE9224 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E894E31C476A9200CE9224 /* main.m */; };
+		C9E894E71C476A9200CE9224 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E894E61C476A9200CE9224 /* AppDelegate.m */; };
+		C9E894EA1C476A9200CE9224 /* ChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E894E91C476A9200CE9224 /* ChatController.m */; };
+		C9E894ED1C476A9200CE9224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E894EB1C476A9200CE9224 /* Main.storyboard */; };
+		C9E894EF1C476A9200CE9224 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E894EE1C476A9200CE9224 /* Assets.xcassets */; };
+		C9E894F21C476A9200CE9224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E894F01C476A9200CE9224 /* LaunchScreen.storyboard */; };
+		C9E894FD1C476A9300CE9224 /* ApiDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E894FC1C476A9300CE9224 /* ApiDemoTests.m */; };
+		C9E895081C476A9300CE9224 /* ApiDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E895071C476A9300CE9224 /* ApiDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9E894F91C476A9300CE9224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E894D71C476A9200CE9224 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E894DE1C476A9200CE9224;
+			remoteInfo = ApiDemo;
+		};
+		C9E895041C476A9300CE9224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9E894D71C476A9200CE9224 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E894DE1C476A9200CE9224;
+			remoteInfo = ApiDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C904E0B81CB3B74D00F6A36D /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		C904E0BA1CB3B75A00F6A36D /* JivoSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JivoSdk.h; sourceTree = "<group>"; };
+		C904E0BB1CB3B75A00F6A36D /* JivoSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JivoSdk.m; sourceTree = "<group>"; };
+		C93530F61C748C5A00A2C089 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		C93530F71C748C5A00A2C089 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		C93531061C74B3F900A2C089 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C935310E1C74FB7000A2C089 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C959959E1CA8E6CB0021DE4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9A68E451CA8E70D006746BD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9A68E4D1CA8FA17006746BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9A68E4E1CA8FA17006746BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C9A68E4F1CA8FA20006746BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9E894DF1C476A9200CE9224 /* JivoSupport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JivoSupport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E894E31C476A9200CE9224 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9E894E51C476A9200CE9224 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9E894E61C476A9200CE9224 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9E894E81C476A9200CE9224 /* ChatController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatController.h; sourceTree = "<group>"; };
+		C9E894E91C476A9200CE9224 /* ChatController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatController.m; sourceTree = "<group>"; };
+		C9E894EE1C476A9200CE9224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9E894F31C476A9200CE9224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E894F81C476A9300CE9224 /* JivoSupport.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JivoSupport.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E894FC1C476A9300CE9224 /* ApiDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiDemoTests.m; sourceTree = "<group>"; };
+		C9E894FE1C476A9300CE9224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E895031C476A9300CE9224 /* JivoSupport.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JivoSupport.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E895071C476A9300CE9224 /* ApiDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiDemoUITests.m; sourceTree = "<group>"; };
+		C9E895091C476A9300CE9224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9E894DC1C476A9200CE9224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9E894F51C476A9300CE9224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9E895001C476A9300CE9224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9E894D61C476A9200CE9224 = {
+			isa = PBXGroup;
+			children = (
+				C935310C1C74FB6B00A2C089 /* InfoPlist.strings */,
+				C93531051C74B3EE00A2C089 /* Localizable.strings */,
+				C9E894E11C476A9200CE9224 /* Support */,
+				C9E894FB1C476A9300CE9224 /* SupportTests */,
+				C9E895061C476A9300CE9224 /* SupportUITests */,
+				C9E894E01C476A9200CE9224 /* Products */,
+				C904E0B81CB3B74D00F6A36D /* html */,
+			);
+			sourceTree = "<group>";
+		};
+		C9E894E01C476A9200CE9224 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E894DF1C476A9200CE9224 /* JivoSupport.app */,
+				C9E894F81C476A9300CE9224 /* JivoSupport.xctest */,
+				C9E895031C476A9300CE9224 /* JivoSupport.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9E894E11C476A9200CE9224 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C9E894E51C476A9200CE9224 /* AppDelegate.h */,
+				C9E894E61C476A9200CE9224 /* AppDelegate.m */,
+				C93530F61C748C5A00A2C089 /* HomeController.h */,
+				C904E0BA1CB3B75A00F6A36D /* JivoSdk.h */,
+				C904E0BB1CB3B75A00F6A36D /* JivoSdk.m */,
+				C93530F71C748C5A00A2C089 /* HomeController.m */,
+				C9E894E81C476A9200CE9224 /* ChatController.h */,
+				C9E894E91C476A9200CE9224 /* ChatController.m */,
+				C9E894EB1C476A9200CE9224 /* Main.storyboard */,
+				C9E894EE1C476A9200CE9224 /* Assets.xcassets */,
+				C9E894F01C476A9200CE9224 /* LaunchScreen.storyboard */,
+				C9E894F31C476A9200CE9224 /* Info.plist */,
+				C9E894E21C476A9200CE9224 /* Supporting Files */,
+			);
+			name = Support;
+			path = ApiDemo;
+			sourceTree = "<group>";
+		};
+		C9E894E21C476A9200CE9224 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9E894E31C476A9200CE9224 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9E894FB1C476A9300CE9224 /* SupportTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9E894FC1C476A9300CE9224 /* ApiDemoTests.m */,
+				C9E894FE1C476A9300CE9224 /* Info.plist */,
+			);
+			name = SupportTests;
+			path = ApiDemoTests;
+			sourceTree = "<group>";
+		};
+		C9E895061C476A9300CE9224 /* SupportUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9E895071C476A9300CE9224 /* ApiDemoUITests.m */,
+				C9E895091C476A9300CE9224 /* Info.plist */,
+			);
+			name = SupportUITests;
+			path = ApiDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9E894DE1C476A9200CE9224 /* JivoSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9E8950C1C476A9300CE9224 /* Build configuration list for PBXNativeTarget "JivoSupport" */;
+			buildPhases = (
+				C9E894DB1C476A9200CE9224 /* Sources */,
+				C9E894DC1C476A9200CE9224 /* Frameworks */,
+				C9E894DD1C476A9200CE9224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JivoSupport;
+			productName = ApiDemo;
+			productReference = C9E894DF1C476A9200CE9224 /* JivoSupport.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9E894F71C476A9300CE9224 /* JivoSupportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9E8950F1C476A9300CE9224 /* Build configuration list for PBXNativeTarget "JivoSupportTests" */;
+			buildPhases = (
+				C9E894F41C476A9300CE9224 /* Sources */,
+				C9E894F51C476A9300CE9224 /* Frameworks */,
+				C9E894F61C476A9300CE9224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9E894FA1C476A9300CE9224 /* PBXTargetDependency */,
+			);
+			name = JivoSupportTests;
+			productName = ApiDemoTests;
+			productReference = C9E894F81C476A9300CE9224 /* JivoSupport.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9E895021C476A9300CE9224 /* JivoSupportUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9E895121C476A9300CE9224 /* Build configuration list for PBXNativeTarget "JivoSupportUITests" */;
+			buildPhases = (
+				C9E894FF1C476A9300CE9224 /* Sources */,
+				C9E895001C476A9300CE9224 /* Frameworks */,
+				C9E895011C476A9300CE9224 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9E895051C476A9300CE9224 /* PBXTargetDependency */,
+			);
+			name = JivoSupportUITests;
+			productName = ApiDemoUITests;
+			productReference = C9E895031C476A9300CE9224 /* JivoSupport.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9E894D71C476A9200CE9224 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = JivoSite;
+				TargetAttributes = {
+					C9E894DE1C476A9200CE9224 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 2Z8328WFM8;
+					};
+					C9E894F71C476A9300CE9224 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C9E894DE1C476A9200CE9224;
+					};
+					C9E895021C476A9300CE9224 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C9E894DE1C476A9200CE9224;
+					};
+				};
+			};
+			buildConfigurationList = C9E894DA1C476A9200CE9224 /* Build configuration list for PBXProject "JivoSupport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = C9E894D61C476A9200CE9224;
+			productRefGroup = C9E894E01C476A9200CE9224 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9E894DE1C476A9200CE9224 /* JivoSupport */,
+				C9E894F71C476A9300CE9224 /* JivoSupportTests */,
+				C9E895021C476A9300CE9224 /* JivoSupportUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9E894DD1C476A9200CE9224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93531031C74B3EE00A2C089 /* Localizable.strings in Resources */,
+				C904E0B91CB3B74D00F6A36D /* html in Resources */,
+				C935310A1C74FB6B00A2C089 /* InfoPlist.strings in Resources */,
+				C9E894F21C476A9200CE9224 /* LaunchScreen.storyboard in Resources */,
+				C9E894EF1C476A9200CE9224 /* Assets.xcassets in Resources */,
+				C9E894ED1C476A9200CE9224 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9E894F61C476A9300CE9224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9E895011C476A9300CE9224 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9E894DB1C476A9200CE9224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93530F81C748C5A00A2C089 /* HomeController.m in Sources */,
+				C9E894EA1C476A9200CE9224 /* ChatController.m in Sources */,
+				C9E894E71C476A9200CE9224 /* AppDelegate.m in Sources */,
+				C9E894E41C476A9200CE9224 /* main.m in Sources */,
+				C904E0BC1CB3B75A00F6A36D /* JivoSdk.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9E894F41C476A9300CE9224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E894FD1C476A9300CE9224 /* ApiDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9E894FF1C476A9300CE9224 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E895081C476A9300CE9224 /* ApiDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9E894FA1C476A9300CE9224 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9E894DE1C476A9200CE9224 /* JivoSupport */;
+			targetProxy = C9E894F91C476A9300CE9224 /* PBXContainerItemProxy */;
+		};
+		C9E895051C476A9300CE9224 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9E894DE1C476A9200CE9224 /* JivoSupport */;
+			targetProxy = C9E895041C476A9300CE9224 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C93531051C74B3EE00A2C089 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C93531061C74B3F900A2C089 /* en */,
+				C9A68E4E1CA8FA17006746BD /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C935310C1C74FB6B00A2C089 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C935310E1C74FB7000A2C089 /* en */,
+				C9A68E4D1CA8FA17006746BD /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9E894EB1C476A9200CE9224 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C959959E1CA8E6CB0021DE4A /* en */,
+				C9A68E4F1CA8FA20006746BD /* ru */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9E894F01C476A9200CE9224 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9A68E451CA8E70D006746BD /* en */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9E8950A1C476A9300CE9224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9E8950B1C476A9300CE9224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9E8950D1C476A9300CE9224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				INFOPLIST_FILE = ApiDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.support;
+				PRODUCT_NAME = JivoSupport;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9E8950E1C476A9300CE9224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				INFOPLIST_FILE = ApiDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.support;
+				PRODUCT_NAME = JivoSupport;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9E895101C476A9300CE9224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ApiDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.ApiDemoTests;
+				PRODUCT_NAME = JivoSupport;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JivoSupport.app/JivoSupport";
+			};
+			name = Debug;
+		};
+		C9E895111C476A9300CE9224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ApiDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.ApiDemoTests;
+				PRODUCT_NAME = JivoSupport;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JivoSupport.app/JivoSupport";
+			};
+			name = Release;
+		};
+		C9E895131C476A9300CE9224 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ApiDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.ApiDemoUITests;
+				PRODUCT_NAME = JivoSupport;
+				TEST_TARGET_NAME = ApiDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C9E895141C476A9300CE9224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ApiDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.ApiDemoUITests;
+				PRODUCT_NAME = JivoSupport;
+				TEST_TARGET_NAME = ApiDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9E894DA1C476A9200CE9224 /* Build configuration list for PBXProject "JivoSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9E8950A1C476A9300CE9224 /* Debug */,
+				C9E8950B1C476A9300CE9224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9E8950C1C476A9300CE9224 /* Build configuration list for PBXNativeTarget "JivoSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9E8950D1C476A9300CE9224 /* Debug */,
+				C9E8950E1C476A9300CE9224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9E8950F1C476A9300CE9224 /* Build configuration list for PBXNativeTarget "JivoSupportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9E895101C476A9300CE9224 /* Debug */,
+				C9E895111C476A9300CE9224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9E895121C476A9300CE9224 /* Build configuration list for PBXNativeTarget "JivoSupportUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9E895131C476A9300CE9224 /* Debug */,
+				C9E895141C476A9300CE9224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9E894D71C476A9200CE9224 /* Project object */;
+}

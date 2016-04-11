@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Jivo Помощь</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="begin_chat">Начать чат</string>
+    <string name="chat_with">Напишите в техподдержку JivoSite</string>
+    <string name="made_with">Это приложение разработано</string>
+    <string name="sdk">на мобильном SDK JivoSite</string>
+</resources>
