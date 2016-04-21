@@ -1,19 +1,25 @@
 # MobileSdk
+Компонент widget mobile (папка html) состоит из файлов:
+- index_ru.html
+- index_en.html
+- bundle.js
 
-Компонент widget mobile состоит из 2-х файлов:
-index.html
-bundle.js
+Папку html нужно подключить в ресурсы вашего проекта. В папках iOS, Android размещены исходные коды sdk, которые нужно также подключить в проект.
 
-в Папке supportApp размещены 2 проекта iOs и Android с демонстрацией подключения компонента и его использования
-В ресурсах каждого проекта есть папка html, где расмещен встраиваемый виджет
+О том как подключить SDK в проект можно посмотреть в видеоинструкциях:
+ - [iOS][iosmanual]
+ - [Android][androidmanual]
 
-в Папке sdk размещены файлы sdk для передачи в публичное хранилище
+ [iosmanual]: <https://www.youtube.com/watch?v=2M5BqDubp7g>
+ [androidmanual]: <https://www.youtube.com/watch?v=X5AEWG83G0g>
 
-# Системные требования
-Требуется ос: iOS 8.0+ , Android 4.4+
-Для сборки: XCode 7.2, Android Studio 2.0
+В Папке demo размещены 2 проекта iOs и Android с демонстрацией подключения компонента и его использования.
 
-# Настройка
+### Системные требования
+- iOS 8.0+, XCode 7.2
+- Android 4.4+, Android Studio 2.0
+
+### Настройка
 Настройка производится в файле index.html
 
         jivo_config = {
@@ -49,47 +55,22 @@ bundle.js
             "placeholder": 'Введите сообщение'
         }
 
-# iOS
-    Для подключения в проект iOS нужно перенести в свой проект папку html и исходные коды JivoSdk
-    в контроллере для встаивания используем протокол JivoDelegate и размещаем компонент UIWebView
-    инициализируем переменную JivoSdk и при инициализации передаем ссылку на webview и строку с локализацией lang
-    будет загружаться файл index_<lang>.html, второй параметр необязательный, в этом случае будет загружен index.html
-    в метод onEvent будут приходить события из компонента
+#### iOS
+Для подключения в проект iOS нужно перенести в свой проект папку html и исходные коды JivoSdk в контроллере для встаивания используем протокол JivoDelegate и размещаем компонент UIWebView инициализируем переменную JivoSdk и при инициализации передаем ссылку на webview и строку с локализацией lang будет загружаться файл index_<lang>.html, второй параметр необязательный, в этом случае будет загружен index.html в метод onEvent будут приходить события из компонента
 
-# Android
-    Для подключения в проект Android нужно перенести в папку assets ресурсы html и исходные коды JivoSdk
-    в Activity для встаивания имплементируем JivoDelegate и размещаем компонент UIWebView
-    инициализируем переменную JivoSdk и при инициализации передаем ссылку на webview и строку с локализацией lang
-    будет загружаться файл index_<lang>.html, второй параметр необязательный, в этом случае будет загружен index.html
-    в метод onEvent будут приходить события из компонента
+#### Android
+Для подключения в проект Android нужно перенести в папку assets ресурсы html и исходные коды JivoSdk в Activity для встаивания имплементируем JivoDelegate и размещаем компонент UIWebView инициализируем переменную JivoSdk и при инициализации передаем ссылку на webview и строку с локализацией lang будет загружаться файл index_<lang>.html, второй параметр необязательный, в этом случае будет загружен index.html в метод onEvent будут приходить события из компонента
 
-# Работа
+### Работа
 Виджет отправляет события в приложения, используя протокол jivoapi://
 
+- установлено соединение (jivoapi://connection.connect)
+- соединение откючено (jivoapi://connection.disconnect)
+- ошибки при подключении (jivoapi://connection.error)
+- получено сообщение (jivoapi://agent.message)
+- чат сервер разорвал соединение, некому ответить (jivoapi://connection.force_offline)
+- установлено подключение с сервером (jivoapi://connection.startup_ok)
+- оператор принял чат (jivoapi://connection.accept)
+- оператор передал чат (jivoapi://connection.transferred)
+- изменился оператор (jivoapi://agent.set)
 
-//установлено соединение
-jivoapi://connection.connect
-
-//соединение откючено
-jivoapi://connection.disconnect
-
-//ошибки при подключении
-jivoapi://connection.error
-
-//получено сообщение
-jivoapi://agent.message
-
-чат сервер разорвал соединение, некому ответить
-jivoapi://connection.force_offline
-
-установлено подключение с сервером
-jivoapi://connection.startup_ok
-
-оператор принял чат
-jivoapi://connection.accept
-
-оператор передал чат
-jivoapi://connection.transferred
-
-изменился оператор
-jivoapi://agent.set
