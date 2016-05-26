@@ -1,11 +1,22 @@
-# MobileSdk
-Компонент widget mobile (папка html) состоит из файлов:
-- index_ru.html
-- index_en.html
-- bundle.js
+# JivoSite Mobile SDK для разработчиков
+JivoSite Mobile SDK позволяет встроить чат в мобильные приложения iOS и Android и принимать обращения клиентов.
 
-Папку html нужно подключить в ресурсы вашего проекта. В папках iOS, Android размещены исходные коды sdk, которые нужно также подключить в проект.
+### Демо
+В папке demo размещены 2 проекта iOs и Android с демонстрацией подключения SDK и его использования.
+Эти приложения позволяют обратиться в техподдержку JivoSite в чате.
 
+ - [App Store][iossdkapp]
+ - [Google Play][androidsdkapp]
+
+ [iossdkapp]: <https://itunes.apple.com/ru/app/jivosite-sdk-dla-razrabotcikov/id1085180661?mt=8>
+ [androidsdkapp]: <https://play.google.com/store/apps/details?id=com.jivosite.supportapp&hl=ru>
+
+
+### Системные требования
+- iOS 8.0+, XCode 7.2
+- Android 4.4+, Android Studio 2.0
+
+### Подключение
 О том как подключить SDK в проект можно посмотреть в видеоинструкциях:
  - [iOS][iosmanual]
  - [Android][androidmanual]
@@ -13,11 +24,6 @@
  [iosmanual]: <https://www.youtube.com/watch?v=2M5BqDubp7g>
  [androidmanual]: <https://www.youtube.com/watch?v=X5AEWG83G0g>
 
-В Папке demo размещены 2 проекта iOs и Android с демонстрацией подключения компонента и его использования.
-
-### Системные требования
-- iOS 8.0+, XCode 7.2
-- Android 4.4+, Android Studio 2.0
 
 ### Получение widget_id и site_id
 Для получения widget_id и site_id необходимо в программе оператора нажать на кнопку "Протестировать чат", выбрать нужный из списка.
