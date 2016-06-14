@@ -61,7 +61,7 @@ public class JivoSdk {
 
         webView.getViewTreeObserver().addOnGlobalLayoutListener(list);
 
-        //создаем спиннер
+        //spinner create
         progr = new ProgressDialog(webView.getContext());
         progr.setTitle("JivoSite");
         progr.setMessage("Загрузка...");
@@ -71,7 +71,7 @@ public class JivoSdk {
         webSettings.setDomStorageEnabled(true);
         webSettings.setDatabaseEnabled(true);
 
-        //пробрасываем JivoInterface в Javascript
+        //send JivoInterface to Javascript
         webView.addJavascriptInterface(new JivoInterface(webView), "JivoInterface");
         webView.setWebViewClient(new MyWebViewClient());
 

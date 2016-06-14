@@ -23,7 +23,7 @@
 
 @synthesize delegate;
 
-/* hackishFixClassName для открытия стандартной клавиатуры*/
+/* hackishFixClassName for hide keyboard*/
 static const char * const hackishFixClassName = "UIWebBrowserViewMinusAccessoryView";
 static Class hackishFixClass = Nil;
 
@@ -78,7 +78,7 @@ static Class hackishFixClass = Nil;
 }
 
 - (void)removeBar {
-    // убираем toolbar на клаве
+    // hide keyboard toolbar
     if (![self hackishlyHidesInputAccessoryView]){
         [self setHackishlyHidesInputAccessoryView: YES];
     }
@@ -87,10 +87,10 @@ static Class hackishFixClass = Nil;
 
 - (void)keyboardWillShow:(NSNotification *)notification {
     NSLog(@"keyboardWillShow");
-    //перед показом клавиатуры делаем ее стандартной
+    //remove bar from keyboard
     [self performSelector:@selector(removeBar) withObject:nil afterDelay:0];
     
-    //вычисляем высоту клавиатуры и передаем в виджет
+    //calculate keyboard height
     CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrame = [_webView convertRect:keyboardFrame fromView:nil];
     
@@ -102,7 +102,7 @@ static Class hackishFixClass = Nil;
 - (void)keyboardDidShow:(NSNotification *)notification {
     NSLog(@"keyboardDidShow");
     
-    //вычисляем высоту клавиатуры и передаем в виджет
+    //calculate keyboard height and send to widget
     CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrame = [_webView convertRect:keyboardFrame fromView:nil];
     
@@ -114,7 +114,7 @@ static Class hackishFixClass = Nil;
 - (void)keyboardWillHide:(NSNotification *)notification {
     NSLog(@"keyboardWillHide");
     
-    // анимация для скрытия клавиатуры
+    // keyboard animation
     CGRect frame = _webView.frame;
     frame.origin.y = 0;
     
@@ -130,7 +130,7 @@ static Class hackishFixClass = Nil;
 }
 
 
-/* Создание спиннера пока загружается webview*/
+/* webview load spinner*/
 - (void)createLoader {
     loadingView = [[UIView alloc]initWithFrame:CGRectMake(100, 400, 80, 80)];
     loadingView.backgroundColor = [UIColor colorWithWhite:0. alpha:0.6];
@@ -175,12 +175,12 @@ static Class hackishFixClass = Nil;
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     //onDidStartLoad
-    //спиннер видим
+    //show spinner
     [loadingView setHidden:NO];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    //спиннер не видим
+    //hide spinner
     [loadingView setHidden:YES];
     //for ios 7.1
     [self removeBar];
@@ -188,7 +188,7 @@ static Class hackishFixClass = Nil;
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
-    //если загрузка по протоколу jivoapi://, то начинаем обработку
+    //if jivoapi:// protocol
     if ([[[url scheme] lowercaseString] isEqualToString:@"jivoapi"]) {
         if([[[url absoluteString] lowercaseString] isEqualToString:@"jivoapi://command.hidekeyboard"]){
             [_webView endEditing:YES];
@@ -239,7 +239,7 @@ static Class hackishFixClass = Nil;
 }
 
 - (void) prepare; {
-    //подписываемся на уведомления клавиатуы
+    //add keyboard observers
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
@@ -260,21 +260,21 @@ static Class hackishFixClass = Nil;
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
     
-    //назначенее делегата
+    //set delegate
     _webView.delegate = self;
 }
 
 -(void) start;{
     
-    //спиннер
+    //spinner
     [self createLoader];
     
-    //убираем нативный скролл
+    //hide native scroll
     _webView.scrollView.scrollEnabled = NO;
     _webView.scrollView.bounces = NO;
     
     
-    //настройка скрытия клавиатуры
+    //setup keyboard hide
     _webView.scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     
     NSString *indexFile;
@@ -285,7 +285,7 @@ static Class hackishFixClass = Nil;
         indexFile = @"index";
     }
     
-    //загрузка кода виджета в webview
+    //load widget code to webview
     NSString *htmlFile = [[NSBundle mainBundle] pathForResource:indexFile ofType:@"html" inDirectory:@"/html"];
     NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
     

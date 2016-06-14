@@ -1,38 +1,55 @@
+# JivoChat Mobile SDK
+
+With Jivo mobile SDK you can integrate the chat  widget for customer support into your native app for iOS or Android. Integration will only take a few minutes because the chat interface is already implemented – you only need to add a couple of lines in your code to get the chat working.
+
+[Continue reading in English][sdkengver]
+[sdkengver]:
+<https://github.com/JivoSite/MobileSdk/blob/master/README.EN.md>
+
+----
+
 # JivoSite Mobile SDK для разработчиков
-JivoSite Mobile SDK позволяет встроить чат в мобильные приложения iOS и Android и принимать обращения клиентов.
+JivoSite Mobile SDK позволяет встроить чат для поддержки клиентов в нативные мобильные приложения iOS и Android и принимать обращения клиентов. Интеграция занимает несколько минут, так как интерфейс чата с лентой сообщений уже реализован – вам понадобится только добавить пару строчек в ваш код.
 
-### Демо
-В папке demo размещены 2 проекта iOs и Android с демонстрацией подключения SDK и его использования.
-Эти приложения позволяют обратиться в техподдержку JivoSite в чате.
 
- - [App Store][iossdkapp]
- - [Google Play][androidsdkapp]
+### Демо-приложения для iOS и Android
+Посмотрите, как работает чат внутри приложения на примере наших демо-приложений. Эти две очень простые аппки позволяют написать в чат  техподдержке JivoSite.
+
+ - [Демо-прога для iOS][iossdkapp]
+ - [Демо-прога для Android][androidsdkapp]
 
  [iossdkapp]: <https://itunes.apple.com/ru/app/jivosite-sdk-dla-razrabotcikov/id1085180661?mt=8>
  [androidsdkapp]: <https://play.google.com/store/apps/details?id=com.jivosite.supportapp&hl=ru>
 
+Исходники этих приложений можно найти в папке demo.
 
-### Системные требования
+
+### Поддерживаемые ОС
 - iOS 8.0+, XCode 7.2
 - Android 4.4+, Android Studio 2.0
 
-### Подключение
-О том как подключить SDK в проект можно посмотреть в видеоинструкциях:
- - [iOS][iosmanual]
- - [Android][androidmanual]
+### Инструкция по началу работы
+Посмотрите наши видео и все сразу станет понятно:
+ - [Видео-мануал для iOS][iosmanual]
+ - [Видео-мануал для Android][androidmanual]
 
  [iosmanual]: <https://www.youtube.com/watch?v=2M5BqDubp7g>
  [androidmanual]: <https://www.youtube.com/watch?v=X5AEWG83G0g>
 
 
 ### Получение widget_id и site_id
-Для получения widget_id и site_id необходимо в программе оператора нажать на кнопку "Протестировать чат", выбрать нужный из списка.
-В браузере откроется окно с виджетом, нужно открыть консоль браузера и посмотреть значения переменных в объекте window.jivo_config
+Для получения widget_id и site_id в панели управления добавьте канал связи “Мобильное приложение” – вы увидите widget_id и site_id на странице настроек.
 
-### Настройка
-Настройка производится в файле index.html
+
+### Конфигурация SDK
+Настройка производится в файле index.html:
 
         jivo_config = {
+            //widget_id - ЗАМЕНИТЕ НА СВОЙ!
+            "widget_id": "xxxx",
+
+            //site_id - ЗАМЕНИТЕ НА СВОЙ!
+            "site_id": xxxxx,
 
             //цвет кнопки отправить
             "plane_color":"red",
@@ -52,12 +69,6 @@ JivoSite Mobile SDK позволяет встроить чат в мобильн
             //активное приглашение, если не используем, то оставить пустым
             "active_message": "Здравствуйте! Я могу вам чем-то помочь?",
 
-            //widget_id
-            "widget_id": "eyLibOwrJA",
-
-            //site_id
-            "site_id": 204998,
-
             //ссылка, которая будет светиться в программе у оператора
             "app_link":'Widget_Mobile',
 
@@ -66,21 +77,21 @@ JivoSite Mobile SDK позволяет встроить чат в мобильн
         }
 
 #### iOS
-Для подключения в проект iOS нужно перенести в свой проект папку html и исходные коды JivoSdk в контроллере для встаивания используем протокол JivoDelegate и размещаем компонент UIWebView инициализируем переменную JivoSdk и при инициализации передаем ссылку на webview и строку с локализацией lang будет загружаться файл index_<lang>.html, второй параметр необязательный, в этом случае будет загружен index.html в метод onEvent будут приходить события из компонента
+Для подключения в проект iOS нужно перенести в свой проект папку html и исходные коды JivoSdk. В контроллере для встаивания используем протокол JivoDelegate и размещаем компонент UIWebView. Инициализируем переменную JivoSdk, при инициализации передаем ссылку на webview и строку с локализацией lang. Будет загружаться файл index_<lang>.html. Параметр lang необязательный, в этом случае будет загружен index.html. В метод onEvent будут приходить события из компонента. Перечень событий описан в разделе “События”.
 
 #### Android
-Для подключения в проект Android нужно перенести в папку assets ресурсы html и исходные коды JivoSdk в Activity для встаивания имплементируем JivoDelegate и размещаем компонент UIWebView инициализируем переменную JivoSdk и при инициализации передаем ссылку на webview и строку с локализацией lang будет загружаться файл index_<lang>.html, второй параметр необязательный, в этом случае будет загружен index.html в метод onEvent будут приходить события из компонента
+Для подключения в проект Android нужно перенести в папку assets ресурсы html и исходные коды JivoSdk. В Activity для встаивания имплементируем JivoDelegate и размещаем компонент UIWebView. Инициализируем переменную JivoSdk, при инициализации передаем ссылку на webview и строку с локализацией lang. Будет загружаться файл index_<lang>.html. Параметр lang необязательный, в этом случае будет загружен index.html. В метод onEvent будут приходить события из компонента.
+Перечень событий описан в разделе “События”.
 
-### Работа
-Виджет отправляет события в приложения, используя протокол jivoapi://
+### События
+Виджет отправляет следующие события в метод onEvent
 
-- установлено соединение (jivoapi://connection.connect)
-- соединение откючено (jivoapi://connection.disconnect)
-- ошибки при подключении (jivoapi://connection.error)
-- получено сообщение (jivoapi://agent.message)
-- чат сервер разорвал соединение, некому ответить (jivoapi://connection.force_offline)
-- установлено подключение с сервером (jivoapi://connection.startup_ok)
-- оператор принял чат (jivoapi://connection.accept)
-- оператор передал чат (jivoapi://connection.transferred)
-- изменился оператор (jivoapi://agent.set)
-
+- установлено соединение (‘connection.connect’)
+- соединение откючено (‘connection.disconnect’)
+- ошибки при подключении (‘connection.error’)
+- получено сообщение (‘agent.message’)
+- чат сервер разорвал соединение, некому ответить (‘connection.force_offline)
+- установлено подключение с сервером (‘connection.startup_ok’)
+- оператор принял чат (‘connection.accep’t)
+- оператор передал чат (‘connection.transferred’)
+- изменился оператор (‘agent.set’)
