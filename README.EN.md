@@ -27,7 +27,7 @@ View our video and everything will become clear:
 ### Get the widget_id and site_id
 The widget_id and site_id can be found by going to the admin panel and then into the settings section of your Mobile app SDK. If you didn't create one yet, go "Add communication channels -> Mobile app SDK" and after asigning a new name, the widget_id and site_id will be displayed.
 
-### Configuration SDK
+### SDK Configuration
 The following configuration settings can be located in the index.html file:
 
         jivo_config = {
