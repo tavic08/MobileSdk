@@ -59,7 +59,13 @@ The following configuration settings can be located in the index.html file:
             "app_link":'Widget_Mobile',
 
             //The text in the input field
-            "placeholder": "Enter message'
+            "placeholder": "Enter message',
+
+            //use secure connection
+            "secure": true,
+
+            //use for replace onEvent function
+            //"event_func": function(event) {console.log(event)}
         }
 
 #### iOS

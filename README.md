@@ -73,7 +73,13 @@ JivoSite Mobile SDK позволяет встроить чат для подде
             "app_link":'Widget_Mobile',
 
             //Текст в поле ввода
-            "placeholder": 'Введите сообщение'
+            "placeholder": 'Введите сообщение',
+
+            //использовать защищенное соединение
+            "secure": true,
+
+            //используется для перегрузки функции onEvent
+            //"event_func": function(event) {console.log(event)}
         }
 
 #### iOS
